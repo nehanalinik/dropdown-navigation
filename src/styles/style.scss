@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$almostWhite: hsl(0, 0%, 98%);
+$mediumGray: hsl(0, 0%, 41%);
+$almostBlack: hsl(0, 0%, 8%);
+$brown: #010101;
+
+html {
+    font-size: 16px;
+}
+
+button {
+    font-family: 'Epilogue', sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Epilogue', sans-serif;
+    max-height: 100%;
+    background: $almostWhite;
+}
+
+.section-container {
+    padding: 1rem 2rem;
+}
+.main-container{
+    padding: 1rem 5rem;
+}
+@mixin desktopDropdown() {
+    position: absolute;
+    top: 6vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 1rem 1.25rem;
+    white-space: nowrap;
+    border-radius: 0.4rem;
+    color: $mediumGray;
+}
+
+@mixin boxShadow() {
+    -webkit-box-shadow: 2px 2px 24px -11px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 2px 2px 24px -11px rgba(0, 0, 0, 0.38);
+    box-shadow: 2px 2px 24px -11px rgba(0, 0, 0, 0.38);
+}
+
+@import './navbar';
+@import './main';
