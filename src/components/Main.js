@@ -14,13 +14,14 @@ const Main = () => {
                 <p className="desc">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
                 <button className="cta">Learn More</button>
                 <div className="clients-section">
-                    <img src={databiz} alt="databiz" />
-                    <img src={audiophile} alt="audiophile" />
-                    <img src={meet} alt="meet" />
-                    <img src={maker} alt="maker" />
+                    <div className='clients'>
+                        <img src={databiz} alt="databiz" />
+                        <img src={audiophile} alt="audiophile" />
+                        <img src={meet} alt="meet" />
+                        <img src={maker} alt="maker" />
+                    </div>
                 </div>
             </div>
-
         </main>
     )
 }

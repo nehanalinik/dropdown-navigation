@@ -16,7 +16,7 @@ header {
         position: absolute;
         top: 0;
         right: 0;
-        width: 40%;
+        width: 50%;
         min-height: 100vh;
         z-index: 1;
         padding-top: 10vh;
@@ -113,19 +113,7 @@ header {
                 }
 
                 button {
-                    border: none;
-                    background-color: transparent;
-                    padding: 0.85rem 2.55rem;
-                    border: 1px solid $mediumGray;
-                    color: $mediumGray;
-                    border-radius: 0.65rem;
-                    cursor: pointer;
-                    font-size: 1rem;
-                    transition: 0.3s all ease-in;
-                    &:hover {
-                        border-color: $almostBlack;
-
-                    }
+                    @include primaryBtn(transparent, $mediumGray, $mediumGray, $almostBlack, transparent, $mediumGray );
                 }
             }
         }
@@ -137,6 +125,13 @@ header {
     }
 }
 //^ Media Queries
+@media screen and (max-width: 450px) {
+    header{
+        .mobile-view {
+            width: 60%;
+        }
+    }
+}
 @media screen and (min-width: 768px) {
     header{
         display: flex;

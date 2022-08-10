@@ -9,7 +9,6 @@
 $almostWhite: hsl(0, 0%, 98%);
 $mediumGray: hsl(0, 0%, 41%);
 $almostBlack: hsl(0, 0%, 8%);
-$brown: #010101;
 
 html {
     font-size: 16px;
@@ -32,9 +31,11 @@ body {
 .section-container {
     padding: 1rem 2rem;
 }
-.main-container{
+
+.main-container {
     padding: 1rem 5rem;
 }
+
 @mixin desktopDropdown() {
     position: absolute;
     top: 6vh;
@@ -52,6 +53,23 @@ body {
     -webkit-box-shadow: 2px 2px 24px -11px rgba(0, 0, 0, 0.38);
     -moz-box-shadow: 2px 2px 24px -11px rgba(0, 0, 0, 0.38);
     box-shadow: 2px 2px 24px -11px rgba(0, 0, 0, 0.38);
+}
+
+@mixin primaryBtn($bgColor,$borderColor, $textColor, $hoverBorderColor, $hoverBgColor, $hoverTextColor) {
+    border: none;
+    background-color: $bgColor;
+    padding: 0.85rem 2.55rem;
+    border: 1px solid $borderColor;
+    color: $textColor;
+    border-radius: 0.65rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s all ease-in;
+    &:hover {
+        border-color: $hoverBorderColor;
+        background-color: $hoverBgColor;
+        color: $hoverTextColor;
+    }
 }
 
 @import './navbar';
